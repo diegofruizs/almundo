@@ -6,10 +6,10 @@
         ".jshintrc", "**/*.txt"
     ],
     "dependencies": {
-    "angular": "^1.5.8",
-    "bootstrap": "^4.0.0",
+    "angular": "^1.6.1",
+    "bootstrap": "^v4.0.0-alpha.6",
     "angular-ui-router": "~0.2.14",
-    "angular-bootstrap": "^0.13.4"
+    "angular-bootstrap": "^2.5.0"
   },
   "devDependencies": {}
 }

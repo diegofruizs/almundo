@@ -22,3 +22,19 @@
 .stars-almundo{
 	padding: 10px;
 }
+
+.title-hotels{
+	color: #2474A6;
+}
+
+.title-price{
+	color: #F2A30F;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
+.utils{
+	margin-top: 10%;
+}
