@@ -1,0 +1,114 @@
+<div class="row space-top ">
+    <div class="col-md-3">
+      <div class="card-block">
+        <h4 class="card-title">Filtros</h4>
+        <h6 class="card-subtitle mb-2 text-muted"><img src="assets/icons/filters/search.svg" height="20" width="20"/>
+        <span>Nombre de tu hotel</span>
+        </h6>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="searchName.name" placeholder="Ingrese el nombre del hotel...">
+            </div>
+        </div>
+  </div>
+
+</div>
+
+<br>
+<div class="card">
+  <div class="card-header">
+    <img src="assets/icons/filters/star.svg" height="20" width="20"/>
+    <span>Estrellas</span>
+</div>
+<div class="card-block stars-almundo">
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" ng-true-value="" ng-false-value="" ng-model="searchStars.stars" id="allStars">
+      <label class="form-check-label" for="allStars">
+        Todas las estrellas
+    </label>
+
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" ng-true-value="'5'" ng-false-value="" id="fiveStars" ng-model="searchStars.stars">
+    <div class="amenities" ng-repeat="a in range(5) track by $index">
+        <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+    </div>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" ng-true-value="'4'" ng-false-value="" id="fourStars" ng-model="searchStars.stars">
+    <div class="amenities" ng-repeat="a in range(4) track by $index">
+        <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+    </div>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" ng-true-value="'3'" ng-false-value="" id="threeStars" ng-model="searchStars.stars">
+    <div class="amenities" ng-repeat="a in range(3) track by $index">
+        <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+    </div>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" ng-true-value="'2'" ng-false-value="" id="twoStars" ng-model="searchStars.stars">
+    <div class="amenities" ng-repeat="a in range(2) track by $index">
+        <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+    </div>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" ng-true-value="'1'" ng-false-value="" id="oneStars" ng-model="searchStars.stars">
+    <div class="amenities" ng-repeat="a in range(1) track by $index">
+        <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="col-md-9">
+
+    <div class="border row space-top" ng-repeat="hotel in hotels | filter: searchName | filter: searchStars" >
+        <div class="col-md-4">
+            <div class="img-thumbnail">
+                <img class="img-fluid" ng-src='assets/images/hotels/{{hotel.image}}' alt="{{hotel.name}}" />                  
+            </div>        
+        </div>
+        <div class="col-md-4">
+
+          <div class="card-block">
+            <h4 class="card-title">{{hotel.name}}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Este hotel cuenta con</h6>
+            <div class="amenities" ng-repeat="a in range(hotel.stars) track by $index">
+                <img src="assets/icons/filters/star.svg" alt="star" height="20" width="20">
+            </div>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p class="card-text">Servicios disponibles</p>
+            <div class="amenities" ng-repeat="amenitie in hotel.amenities ">
+                <img ng-src="assets/icons/amenities/{{amenitie}}.svg" height="20" width="20" />`
+            </div>    
+
+        </div>
+
+    </div>
+
+    <div class="border col-md-4">
+        <div class="card-block text-center">
+            <p class="card-text">Precio por noche por habitación</p>
+            <h4 class="card-title">{{hotel.price}}</h4>
+            <button class="btn btn-almundo">Ver hotel</button>
+        </div>
+
+    </div>     
+
+
+
+</div>
+
+</div>
+</div>

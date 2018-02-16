@@ -1,0 +1,15 @@
+{
+    "name": "task-web",
+    "version": "1.0.0",
+    "main": "index.html",
+    "ignore": [
+        ".jshintrc", "**/*.txt"
+    ],
+    "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^4.0.0",
+    "angular-ui-router": "~0.2.14",
+    "angular-bootstrap": "^0.13.4"
+  },
+  "devDependencies": {}
+}
