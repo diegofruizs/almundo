@@ -1,4 +1,4 @@
-#Example app with nodejs as backend and angularjs as frontend
+# Example app with nodejs as backend and angularjs as frontend
 
 Para ejecutar localmente
 * `npm install` - para dependencias para backend
@@ -7,5 +7,7 @@ Para ejecutar localmente
 * iniciar mongodb con la instrucción `mongod`
 * iniciar la aplicación `npm start`
 * verificar en `localhost:3000`
+
+Running on Heroku https://almundodiego.herokuapp.com/#!/
 
 @diegofruizs
